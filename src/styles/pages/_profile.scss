@@ -1,0 +1,62 @@
+.profileInner {
+    background-color: pink;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background: url(https://career-lunch-storage.s3.eu-central-1.amazonaws.com/v2/blog/articles/linkedin-title-picture.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 5rem;
+
+    .bgImage {
+        width: 8rem;
+        position: absolute;
+        margin-top: 4rem;
+        height: 8rem;
+        border-radius: 50%;
+    }
+}
+
+.profileDetails {
+    text-align: center;
+
+    p {
+        margin-top: 0.5rem;
+    }
+}
+
+.profileBtn {
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+
+    .btn-primary {
+        border: 1px solid;
+        background-color: #203239;
+        color: white;
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: all 0.3s;
+        margin-right: 0.5rem;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .btn-secondary {
+        border: 1px solid;
+        margin-left: 0.5rem;
+        font-weight: 600;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        color: #203239;
+        transition: all 0.3s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}

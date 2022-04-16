@@ -1,3 +1,25 @@
-.h1 {
-  color: red;
+.homeImage {
+    height: 20rem;
+    background-color: pink;
+    background-image: url(https://www.iiitdmj.ac.in/ict.iiitdmj.ac.in/images/campus3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.feedSection {
+    padding: 2rem;
+
+    h2 {
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .feeds {
+        margin-top: 4rem;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 3rem;
+        column-gap: 3rem;
+        justify-content: center;
+    }
 }
