@@ -51,6 +51,10 @@
 
 
 // single item
+.imageContainer {
+    display: flex;
+    justify-content: center;
+}
 
 .singleItemContainer {
     display: flex;

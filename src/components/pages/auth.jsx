@@ -1,4 +1,4 @@
-import { signInWithPopup } from 'firebase/auth';
+import { onAuthStateChanged, signInWithPopup } from 'firebase/auth';
 import React, { useContext, useEffect } from 'react'
 import { auth, provider, signInWithGoogle } from '../../config/firebase'
 import { variants } from './context/context';
@@ -6,7 +6,8 @@ import { motion } from 'framer-motion';
 import { ContextProvider } from './context/context';
 import ProfilePage from './profilePage';
 export default function Auth() {
-    const { isLoggedIn } = useContext(ContextProvider)
+    document.title = 'Login with your account';
+    const { isLoggedIn, setIsLoggedIn } = useContext(ContextProvider)
     console.log(JSON.parse(localStorage.getItem("user")))
     const signInWithGoogle = (auth, provider) => {
         signInWithPopup(auth, provider)
@@ -18,6 +19,15 @@ export default function Auth() {
                 console.log(error);
             });
     };
+    // onAuthStateChanged(auth, (user) => {
+    //     if (user) {
+    //         setIsLoggedIn(true)
+    //         localStorage.setItem('isLoggedIn', true)
+    //     } else {
+    //         setIsLoggedIn(false)
+    //         localStorage.setItem('isLoggedIn', false)
+    //     }
+    // });
     if (!isLoggedIn) {
         return (
             <motion.div

@@ -6,6 +6,7 @@ import { variants } from './context/context';
 import { motion } from 'framer-motion';
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
 export default function AddLostItem() {
+    document.title = "Add Lost Item";
     const [loading, setLoading] = useState(false)
     const { user, isLoggedIn } = useContext(ContextProvider);
     const [title, setTitle] = useState("")

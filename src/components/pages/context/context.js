@@ -10,16 +10,16 @@ export default function Context({ children }) {
 
   const [user, setUser] = useState({})
   const [isLoggedIn, setIsLoggedIn] = useState(false)
+  
   useEffect(() => {
     // console.log(localStorage.getItem("isLoggedIn"))
     Boolean(localStorage.getItem("user")) ? setUser( JSON.parse((localStorage.getItem("user"))) ) : setUser({})
 }, [])
   useEffect(() => {
       Boolean(localStorage.getItem("user")) ? setIsLoggedIn(true) : setIsLoggedIn(false)
-
-}, [user])
+}, [])
   return (
-      <ContextProvider.Provider  value={{user, isLoggedIn}}>
+      <ContextProvider.Provider  value={{user, isLoggedIn, setIsLoggedIn}}>
         {children}
       </ContextProvider.Provider>
   )

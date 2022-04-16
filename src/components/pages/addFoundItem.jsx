@@ -6,6 +6,7 @@ import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
 import { motion } from 'framer-motion';
 import { variants } from './context/context';
 export default function AddFoundItem() {
+    document.title = "Add Found Item";
     const [loading, setLoading] = useState(false)
     const { user, isLoggedIn } = useContext(ContextProvider);
     const [title, setTitle] = useState("")

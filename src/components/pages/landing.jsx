@@ -8,6 +8,7 @@ import { variants } from './context/context'
 import LostItem from "../lostFoundItem";
 import { motion } from "framer-motion";
 export default function Landing() {
+  document.title = "Lost and Found - Home";
   const [loading, setLoading] = useState(true);
   const [dataa, setDataa] = useState([]);
   const collectionRef = collection(db, 'lostfound')
