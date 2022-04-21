@@ -14,6 +14,7 @@ export default function Auth() {
             .then((result) => {
                 localStorage.setItem("user", JSON.stringify(result.user));
                 localStorage.setItem("isLoggedIn", true);
+                window.location.reload()
             })
             .catch((error) => {
                 console.log(error);

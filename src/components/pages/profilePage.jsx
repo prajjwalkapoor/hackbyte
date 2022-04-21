@@ -6,6 +6,7 @@ import { variants } from './context/context'
 export default function ProfilePage() {
     const { user } = useContext(ContextProvider)
     document.title = `Profile Page - ${user.displayName}`
+    console.log(user.photoURL)
     return (
         <motion.div
             variants={variants} // Pass the variant object into Framer Motion 
